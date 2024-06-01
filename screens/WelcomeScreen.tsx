@@ -1,14 +1,14 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 
-import {SafeAreaView} from 'react-native-safe-area-context';
-
 import {COLORS, FONTS, SHADOWS, SIZES} from '../constants/theme';
-import AccentBtn from '../components/AccentBtn';
+
+import Screen from '../components/screen';
+import Button from '../components/button';
 
 const WelcomeScreen = ({navigation}: {navigation: any}) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <Screen style={{backgroundColor: COLORS.light}}>
       <View style={styles.wrapper}>
         <Image
           source={require('../assets/images/delivery-truck.png')}
@@ -23,9 +23,9 @@ const WelcomeScreen = ({navigation}: {navigation: any}) => {
           каждый глоток – это шаг к лучшему самочувствию.
         </Text>
         <View style={styles.btnContainer}>
-          <AccentBtn onPress={() => navigation.navigate('Login')}>
+          <Button onPress={() => navigation.navigate('Login')}>
             Войти в аккаунт
-          </AccentBtn>
+          </Button>
           <TouchableOpacity
             style={{...SHADOWS.default}}
             onPress={() => navigation.navigate('Register')}>
@@ -33,19 +33,13 @@ const WelcomeScreen = ({navigation}: {navigation: any}) => {
           </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+    </Screen>
   );
 };
 
 export default WelcomeScreen;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: COLORS.light,
-  },
   wrapper: {
     alignItems: 'center',
     gap: 20,

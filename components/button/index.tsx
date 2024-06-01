@@ -1,19 +1,16 @@
-import {StyleSheet, Text, TouchableOpacity, ViewStyle} from 'react-native';
-import React from 'react';
-import {COLORS, SIZES, SHADOWS, FONTS} from '../constants/theme';
+import React, {PropsWithChildren} from 'react';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
-const AccentBtn = ({
+import {COLORS, SIZES, SHADOWS, FONTS} from '../../constants/theme';
+import {IButton} from './button.interface';
+
+const Button: React.FC<PropsWithChildren<IButton>> = ({
   children,
   style,
-  onPress,
-}: {
-  children: any;
-  outline?: boolean;
-  style?: ViewStyle;
-  onPress: () => void;
+  ...rest
 }) => {
   return (
-    <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
+    <TouchableOpacity style={[styles.button, style]} {...rest}>
       <Text style={styles.text}>{children}</Text>
     </TouchableOpacity>
   );
@@ -36,4 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AccentBtn;
+export default Button;

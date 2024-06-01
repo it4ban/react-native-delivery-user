@@ -1,11 +1,13 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
-const LoginScreen = () => {
+import Screen from '../components/screen';
+
+const LoginScreen: React.FC = () => {
   return (
-    <View>
+    <Screen>
       <Text>LoginScreen</Text>
-    </View>
+    </Screen>
   );
 };
 

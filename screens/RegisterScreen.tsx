@@ -1,11 +1,13 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
-const RegisterScreen = () => {
+import Screen from '../components/screen';
+
+const RegisterScreen: React.FC = () => {
   return (
-    <View>
+    <Screen style={{backgroundColor: '#fff'}}>
       <Text>RegisterScreen</Text>
-    </View>
+    </Screen>
   );
 };
 

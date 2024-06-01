@@ -11,12 +11,12 @@ import {COLORS, FONTS, SIZES} from '../constants/theme';
 
 const Stack = createNativeStackNavigator();
 
-const headerBackground = () => {
+const headerBackground = (color: string) => {
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: COLORS.light,
+        backgroundColor: color,
       }}
     />
   );
@@ -27,7 +27,7 @@ const RootNavigation = () => {
     <Stack.Navigator
       screenOptions={{
         headerBackground() {
-          return headerBackground();
+          return headerBackground(COLORS.light);
         },
         headerTitleStyle: {
           fontFamily: FONTS.medium,
