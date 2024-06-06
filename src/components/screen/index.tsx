@@ -1,8 +1,7 @@
+import {IScreen} from './screen.interface';
 import React, {PropsWithChildren} from 'react';
 import {StyleSheet} from 'react-native';
-
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {IScreen} from './screen.interface';
 
 const Screen: React.FC<PropsWithChildren<IScreen>> = ({children, style}) => {
   return (

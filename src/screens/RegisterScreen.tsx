@@ -1,7 +1,6 @@
+import Screen from '../components/screen';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-
-import Screen from '../components/screen';
 
 const RegisterScreen: React.FC = () => {
   return (

@@ -1,8 +1,7 @@
+import {IButton} from './button.interface';
+import {COLORS, FONTS, SHADOWS, SIZES} from '@/constants/theme';
 import React, {PropsWithChildren} from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-
-import {COLORS, SIZES, SHADOWS, FONTS} from '../../constants/theme';
-import {IButton} from './button.interface';
 
 const Button: React.FC<PropsWithChildren<IButton>> = ({
   children,

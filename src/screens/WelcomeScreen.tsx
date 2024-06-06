@@ -1,10 +1,8 @@
-import React from 'react';
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
-
-import {COLORS, FONTS, SHADOWS, SIZES} from '../constants/theme';
-
-import Screen from '../components/screen';
 import Button from '../components/button';
+import Screen from '../components/screen';
+import {COLORS, FONTS, SHADOWS, SIZES} from '../constants/theme';
+import React from 'react';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 const WelcomeScreen = ({navigation}: {navigation: any}) => {
   return (
